@@ -155,6 +155,7 @@ body {
 
 .img-projeto img {
     width: 280px;
+    margin-right: -40px;
 }
 
 .btn-projeto {
