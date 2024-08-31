@@ -8,9 +8,9 @@
 
 :root {
     --color-black: #fcfcfc;
-    --color-white: #808080;
+    --color-white: #202020;
     --color-gray: #ffffff;
-    --color-destaque: #5a055a;
+    --color-destaque: red;
 
     --font-title-desktop: 3rem;
     --font-span-desktop: 1.5rem;
@@ -29,6 +29,36 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#loading-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: red;
+}
+
+#loading-text {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    z-index: 10;
+}
+
 
 .container {
     width: 100%;
@@ -41,6 +71,7 @@ body {
     gap: 1.2rem;
     box-sizing: border-box;
     min-height: 100vh;
+    background-color: black;
 }
 
 .card {
@@ -144,7 +175,9 @@ body {
 .text-projeto {
     font-size: 1.3rem;
     font-weight: 500;
-    color: var(--color-destaque);
+    color: white;
+    margin-bottom: 8px;
+
 }
 
 .img-projeto {
@@ -155,7 +188,8 @@ body {
 
 .img-projeto img {
     width: 280px;
-    margin-right: -40px;
+    border-radius: 4%;
+    margin-bottom: 15px;
 }
 
 .btn-projeto {
@@ -167,12 +201,17 @@ body {
 }
 
 .btn {
-    background-color: var(--color-destaque);
+    background-color: white;
     color: var(--color-white);
     font-weight: 600;
     padding: .7rem 1.3rem;
     border-radius: 10px;
     text-decoration: none;
+}
+.btn:hover{
+    background-color: red;
+    color: white;
+    transition: 0.5s;
 }
 
 /************** WIDGET 2*/
@@ -200,7 +239,7 @@ body {
 }
 
 .box-social {
-    background-color: var(--color-destaque);
+    background-color: var(--color-white);
     height: 80px;
     width: 90px;
     border-radius: 10px;
@@ -212,9 +251,18 @@ body {
 
 .box-social i {
     font-size: 2.5rem;
-    color: var(--color-white);
+    color: rgb(255, 255, 255);
+    
 }
-
+.box-social i:hover{
+    color: red;
+    transition: 0.5s;
+}
+.kiwify{
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 5px;
+}
 /************** Skills*/
 .skills {
     width: 100%;
@@ -235,20 +283,20 @@ body {
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: bold;
-    color: var(--color-destaque);
+    color: white;
 }
 
 .skills-icons {
-    width: 20%;
+    width: 65%;
     max-width: 90%;
-    gap: 10px;
+    gap: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .skills-icons i {
-    color: var(--color-black);
+    color: white;
     font-size: 1.5rem;
     transition: color 0.3s;
 }
@@ -266,24 +314,15 @@ body {
     color: #000000;
 }
 
-.skills-icons .fa-js:hover {
-    color: #f7df1e;
+.skills-icons .fa-wordpress:hover {
+    color: #1900ff;
 }
-
-.skills-icons .fa-bootstrap:hover {
-    color: #7952b3;
-}
-
-.skills-icons .fa-react:hover {
-    color: #000000;
-}
-
-.skills-icons .fa-node:hover {
+.skills-icons .fa-network-wired:hover {
     color: #339933;
 }
 
-.skills-icons .fa-php:hover {
-    color: #777bb4;
+.skills-icons .fa-c:hover {
+    color: #ffd000;
 }
 
 .skills-icons .fa-github:hover {
@@ -421,10 +460,14 @@ body {
 }
 
 .btn2 {
-    background-color: var(--color-black);
-    color: #5a055a;
+    background-color: var(--color-white);
+    color: white;
     font-weight: 700;
     padding: .7rem 1.3rem;
     border-radius: 10px;
     text-decoration: none;
+}
+.btn2:hover{
+    color: red;
+    transition: 0.5s;
 }
